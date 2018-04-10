@@ -241,7 +241,7 @@ body { text-align:center; font-family: "arial", arial, sans-serif; font-size: 14
     text-align: left;
     color: #ee7624;
     font-size: 13px;
-    z-index: 3;
+    z-index: 10;
 }
 #nav #mutebtn{
     display:none; 
@@ -359,7 +359,7 @@ body { text-align:center; font-family: "arial", arial, sans-serif; font-size: 14
     background: #fff;
 }
 #f1{z-index: 99;}
- #f21{z-index: 9;} 
+#f7,#f12,#f17,#f21{z-index: 9;}
 #splash {
     z-index: 4;
     position: absolute;
@@ -504,7 +504,7 @@ body { text-align:center; font-family: "arial", arial, sans-serif; font-size: 14
     margin: 10px 0px 3px -10px; 
     padding: 24px 20px 19px 57px; 
     height: 60px; 
-    width: 52%; 
+    width: 62%; 
     background:url(images/quiz-choicebg-selected.png) no-repeat, #fff;  
     list-style-type:none; 
     font-size: 10pt; 
@@ -542,6 +542,13 @@ body { text-align:center; font-family: "arial", arial, sans-serif; font-size: 14
 .quiz .correct {position: absolute; top: 18px; left: 19px; width: 31px; height: 31px; background-image: url(images/quiz-choice-correct.png);  background-repeat:no-repeat;}
 .quiz .incorrect {position: absolute; top: 16px; left: 17px; width: 31px; height: 31px; background-image: url(images/quiz-choice-incorrect.png)}
 
+#f17 .quiz li {
+    padding: 18px 20px 19px 57px;
+}
+
+#f17 .quiz li:last-child {
+    padding: 24px 20px 19px 57px;
+}
 
 #transcript { 
     z-index: 9;
@@ -685,14 +692,16 @@ sup { bottom: 1ex;}
 
 @media (min-width: 768px)and (max-width: 1024px){
     .quiz li {
-        width: 77%;
+        width: 68%;
     }
     .quiz .feedback {
         height: 60px;
         padding: 20px 20px;
         right: 80px;
-        top: 380px;
+        top: 335px;
     }
+
+
     .quiz #quiz-submit {
         right: 114px;
         top: 450px;
