@@ -545,8 +545,7 @@ body { text-align:center; font-family: "arial", arial, sans-serif; font-size: 14
 #f17 .quiz li {
     padding: 18px 20px 19px 57px;
 }
-
-#f17 .quiz li:last-child {
+#f17 .quiz li:first-child {
     padding: 24px 20px 19px 57px;
 }
 

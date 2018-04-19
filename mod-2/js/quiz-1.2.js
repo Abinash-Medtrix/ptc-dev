@@ -116,7 +116,8 @@ function nextQuestion() {
 	      }// selected
 		  else if (question.correctAnswer.indexOf(letter)>-1) {
 			
-			if(flag_attempt==2)$(this).append('<div class="correct">');
+      if(flag_attempt<2)$(this).append('<div class="correct">');
+      //alert("2")
 	      }
       });
 	
@@ -143,11 +144,12 @@ function nextQuestion() {
 				playExtraVideo("f"+currentFrame+"_q"+quizData.currentQuestionNum+"_incorrect1");				
 			}
 		}
-        else $(quizDiv +" .feedback").html(question.feedback[choiceIndex]);
-		if(flag_attempt<2)$(quizDiv +" .quiz-submit img").attr("src", "images/quiz-tryagain.png");
-		else {flag_attempt=0; $(quizDiv +" .quiz-submit").hide();}
+    else $(quizDiv +" .feedback").html(question.feedback[choiceIndex]);
+		if(flag_attempt<2)setTimeout(function(){registerAttractor(showAttractorMessage,98);},1000);;
+		/* else {flag_attempt=0; $(quizDiv +" .quiz-submit").hide();}
         quizData.currentQuestionNum--;
-      }
+       */
+    }
 		
 	  //$(quizDiv +" .quiz-submit img").attr("src", "images/quiz-next.png");
       $(this).unbind(clickHandler);

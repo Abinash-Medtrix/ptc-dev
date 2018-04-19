@@ -94,8 +94,10 @@ function createFlashVideoPlayer() {
       return Math.round(p*1000)/1000;
     },
     clipPercentPlayed: function() {
-      //debug(this.clipPosition()+" / "+this.clipDuration());
-      return (this.clipPosition() / this.clipDuration()) * 100.0;
+        //debug(this.clipPosition()+" / "+this.clipDuration());
+        var p = (this.clipPosition() / this.clipDuration()) * 100.0;
+        p = p > 100 ? 100 : ((p < 0) ? 0 : p);
+        return p;
     },
 	videoAmountLoaded: function() {
       //debug(this.clipPosition()+" / "+this.clipDuration());
@@ -103,7 +105,7 @@ function createFlashVideoPlayer() {
     },
 	totalBytes: function() {
       //debug(this.clipPosition()+" / "+this.clipDuration());
-	  return this._video.GetVariable("totalBytes");
+	    return this._video.GetVariable("totalBytes");
     },
 	percentLoaded: function() {
 		var percent = Math.round((this._video.GetVariable("amountLoaded")/this._video.GetVariable("totalBytes"))*100);
@@ -202,10 +204,10 @@ function createHTML5VideoPlayer() {
       if (p==Number.NaN || p<0) return 0;
       return Math.round(p*1000)/1000;
     },
-    clipPercentPlayed: function() {
-      var p = (this.clipPosition() / this.clipDuration()) * 100.0;
-      if (p > 100 | p < 0) p = 0;
-      return p;
+    clipPercentPlayed: function () {
+        var p = (this.clipPosition() / this.clipDuration()) * 100.0;
+        p = p > 100 ? 100 : ((p < 0) ? 0 : p);
+        return p;
     },
     videoAmountLoaded: function() {
       //debug(this.clipPosition()+" / "+this.clipDuration());
