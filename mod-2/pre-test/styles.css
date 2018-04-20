@@ -559,7 +559,7 @@ sup { bottom: 1ex;}
 
 @media (min-width: 768px)and (max-width: 1024px){
     .quiz li {
-        width: 83%;
+        width: 56%;
     }
     .quiz .feedback {
         height: 60px;

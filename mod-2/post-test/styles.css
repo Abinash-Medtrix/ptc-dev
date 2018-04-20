@@ -569,4 +569,7 @@ sup { bottom: 1ex;}
         right: 114px;
         top: 450px;
     }
+    .quiz li{
+        width: 64%;
+    }
 }
