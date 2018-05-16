@@ -362,6 +362,7 @@ body { text-align:center; font-family: "arial", arial, sans-serif; font-size: 14
 }
 #f1{z-index: 99;}
 #f6,  #f10, #f14, #f19, #f25{z-index: 9;}
+#f27{z-index: 9; background: transparent;}
 #splash {
     z-index: 4;
     position: absolute;

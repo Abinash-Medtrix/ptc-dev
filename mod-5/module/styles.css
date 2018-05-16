@@ -580,6 +580,7 @@ body {
 #f8, #f13, #f17, #f22 {
   z-index: 9;
 }
+#f24{z-index: 9; background: transparent;}
 
 #splash {
   z-index: 4;
